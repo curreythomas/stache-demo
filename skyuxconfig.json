@@ -1,0 +1,12 @@
+{
+  "mode": "easy",
+  "compileMode": "aot",
+  "auth": false,
+  "plugins": ["@blackbaud/skyux-builder-plugin-stache"],
+  "app": {
+    "title": "Stache 2 Template"
+  },
+  "appSettings": {
+    "stache": {}
+  }
+}

@@ -6,11 +6,11 @@
 
 ![alt text](https://github.com/curreythomas/stache-demo/blob/master/src/assets/imgs/app.png)
 
-## API-Home
+## API-Basics
 
 ![alt text](https://github.com/curreythomas/stache-demo/blob/master/src/assets/imgs/api-home.png)
 
-## API-Home 2
+## API-Basics 2
 
 ![alt text](https://github.com/curreythomas/stache-demo/blob/master/src/assets/imgs/api-home2.png)
 

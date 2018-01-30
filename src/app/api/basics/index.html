@@ -1,0 +1,59 @@
+<stache>
+<stache-page-anchor>
+  Basics
+</stache-page-anchor>
+
+<h2><strong>Scheme</strong></h2>
+<p>Once deployed, this API will communicate over HTTPS. Locally on your development environment, you can run this API under HTTP.</p>
+
+<h2><strong>Authorization</strong></h2>
+<p>No authorization at this time. Authorization will be included in future releases.</p>
+
+<h2><strong>Request Headers</strong></h2>
+<p>the followign request headers are required when calling the API:</p>
+<ul>
+  <li>
+    <stache-code>Content-Type</stache-code> - The <stache-code>Content-Type</stache-code> request header should include a value of <stache-code>application/json</stache-code> and is required when providing content within the body of a request.
+  </li>
+</ul>
+<h2><strong>Date Format</strong></h2>
+<p>Date are formatted to the ISO 8601 standard.</p>
+
+
+<h2><strong>HTTP Verbs</strong></h2>
+
+  <sky-tabset>
+    <sky-tab tabHeading="GET">
+      <p>Use to retrieve all resources (organizations) and resource categories via <stache-code>\resources</stache-code>, <stache-code>\categories</stache-code> and a single resource and a single category via <stache-code>\resources\:id</stache-code>, and <stache-code>\categories\:id</stache-code>. </p>
+    </sky-tab>
+    <sky-tab tabHeading="POST">
+      <p>Used to create a resource (organization) and resource category via <stache-code>\resources</stache-code> and <stache-code>\categories</stache-code> </p>
+    </sky-tab>
+    <sky-tab tabHeading="PUT">
+      <p>Used to update a resource (organization) and resource category via <stache-code>\resources\:id</stache-code> and <stache-code>\categories\:id</stache-code>. </p>
+    </sky-tab>
+    <sky-tab tabHeading="DELETE">
+      <p>Used to delete a single resource and single resource category via <stache-code>\resources\:id</stache-code> and <stache-code>\categories\:id</stache-code>.  </p>
+    </sky-tab>
+  </sky-tabset>
+
+  <hr />
+
+
+<h2><strong>Content Types</strong></h2>
+<p>All endpoints accept and return data formatted as JSON. See Request Headers.</p>
+
+<h2><strong>Status Code</strong></h2>
+<ul>
+  <li>200 - OK</li>
+  <li>201 - Created</li>
+  <li>202 - Accepted</li>
+  <li>400 - Bad Request</li>
+  <li>404 - Not Found</li>
+  <li>429 - Too Many Request</li>
+  <li>500 - Internal Server Error</li>
+</ul>
+
+<h2><strong>Filtering</strong></h2>
+<p>TODO: talk about the endpoints that have a filter query string and provide a couple of examples.</p>
+</stache>

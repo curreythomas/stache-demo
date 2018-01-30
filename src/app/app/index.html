@@ -1,0 +1,45 @@
+<app-nav>
+</app-nav>
+
+<stache
+  pageTitle="App"
+  showTableOfContents="false"
+  layout="container">
+
+  <stache-page-summary>
+    <p>
+      The purpose of the application is to provide a way to veteran support networks to provide resources and support for their local veteran community.
+    </p>
+    <p>
+      This is the application that provides the front end experience of the Veteran Support Base application. The current focus is the Mobile Look and Feel with a fall back to responsive sizes. We use React and Material-UI React components to implement Google's Material Design user experience.
+    </p>
+  </stache-page-summary>
+
+
+  <stache-page-anchor>
+    Setup
+  </stache-page-anchor>
+  <stache-markdown>
+  <p>If you havent already done so, install the yarn cli from npm. Then use the yarn cli to install the dependecies for the app by using `yarn`</p>
+</stache-markdown>
+
+  <sky-alert alertType="warning"> NodeJS is required, you can install from <a href="https://nodejs.org">NodeJS</a></sky-alert>
+  <stache-markdown>
+    npm install yarn -g
+    yarn
+  </stache-markdown>
+
+  <stache-page-anchor>
+    Run in Development Mode
+  </stache-page-anchor>
+
+<sky-alert alertType="success">Make sure you have you environment variables setup - </strong><stache-code>`REACT_APP_MAP`</stache-code> <strong>and</strong> <stache-code>`REACT_APP_BASE_URL`</stache-code></sky-alert>
+
+  <stache-markdown>
+    yarn start
+  </stache-markdown>
+
+
+
+
+</stache>

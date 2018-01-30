@@ -3,11 +3,96 @@
 
 <stache
   pageTitle="API"
-  showTableOfContents="true">
+  showTableOfContents="true"
+>
 
   <stache-page-summary>
     <p>
-      Do you have a technical or entity reference? Learn how to share your technical content on Stache 2.
+      This RESTful HTTP API manages the representation of many resources (organizations) filled with dedicated men and women committed to serving our veterans and families. There can be no doubt that these people care a great deal for our warriors. We are grateful for the sacrifices of our veterans and their families. Now, please receive our gratitude and our desire to serve you with that same spirit of excellence.
     </p>
   </stache-page-summary>
+
+  <stache-page-anchor>
+    Getting Started
+  </stache-page-anchor>
+    <p>Instructions on how to get a developer up and running on the Veteran Resource Base API in a local, development environment.</p>
+
+    <sky-alert alertType="info">The instructions assume node >= 7x and you have access to a CouchDB installation on either your local machine or in the cloud as a DBaaS, such as Cloudant.</sky-alert>
+
+
+    <stache-markdown>
+      $ git clone https://github.com/jrs-innovation-center/tcvsn-pwa.git
+      $ cd tcvsn-pwa
+    </stache-markdown>
+
+  <stache-page-anchor>
+    Create a database in CouchDB
+  </stache-page-anchor>
+
+  <p>Using either a local installation of CouchDB or a DBaaS such as Cloudant, create a new database. If your using a DBaaS, create an API key and/or ensure the key as admin rights to the database. Admin rights are needed for creating indexes within the database.</p>
+
+  <p>Using the principle of least privilege, you may wish to create a second API key for your API. This key may only provide read, write access to the database.</p>
+
+<sky-alert alertType="success">Tip: After creating your API Key or keys, you will need to write both the key and password down and keep it secure and safe. In the following step, you will use the key and password to create a COUCHDB_URL as an environment variable.</sky-alert>
+
+
+  <stache-page-anchor>
+    API Environment Variables
+  </stache-page-anchor>
+
+  <h2><strong>.env</strong></h2>
+
+    <ul>
+      <li>At the root of <strong>api</strong> folder, copy the <strong>.env-sample</strong> file as <strong>.env</strong> file. Modify the following environment variables. If you're using a DBaaS, use the key, password, and CouchDB base url to derive the value of <stache-code>COUCHDB_URL</stache-code>. If you aren't using a DBaaS and are running couchDB locally, just use the CouchDB base url. See example below. Use your newly created database name as the value of <stache-code>COUCHDB_NAME</stache-code>. Provide a <stache-code>PORT</stache-code> number, such as 4000, that does not conflict with other port numbers in your project.:</li>
+        <ul>
+          <li><stache-code>COUCHDB_URL</stache-code></li>
+          <li><stache-code>COUCHDB_NAME</stache-code></li>
+          <li><stache-code>PORT</stache-code></li>
+        </ul>
+    </ul>
+
+    <p>For example, here are example values for <stache-code>COUCHDB_URL</stache-code> and <stache-code>COUCHDB_NAME</stache-code> environment variables for an instance of CouchDB DBaaS running in IBM Blue Mix's Cloudant service:</p>
+
+  <sky-alert alertType="danger">Warning: Keep your API password/secret safe! Be sure your .env file is referenced within your .gitignore. Do not expose the secret in GitHub or anywhere else. If your secret is compromised, you will need to regenerate a new API key and secret and update your application.</sky-alert>
+
+    <stache-markdown>
+      <p>COUCHDB_URL=https://<API-KEY>:<API-PASSWORD>@<BASEURLTOCLOUDANT>.com</p>
+      <p>COUCHDB_NAME=veteran</p>
+    </stache-markdown>
+
+    <h3><strong>Complete DBaaS URL Example</strong></h3>
+
+    <stache-markdown>
+      const db = new PouchDB(process.env.COUCHDB_URL + process.env.COUCHDB_NAME)
+
+      // would produce something such as:
+      // const db = new PouchDB(https://arencharlynaturousfeli7:287bb97bafee05f3d2fb7840371182d3d2534red@90629927-b1a9-4251-9b99-f76bd577tedx8-bluemix.cloudant.com/veteran)
+    </stache-markdown>
+
+    <h2><strong>Installing Dependencies and starting our API</strong></h2>
+
+    <p>After you have successfully provided the values for your environment variables, install dependencies, load data, load indexes, and start the api. See <stache-code>scripts</stache-code> within the <strong>package.json</strong> for details:</p>
+
+    <h3><strong>YARN EXAMPLE</strong></h3>
+
+    <stache-markdown>
+      yarn
+      yarn load
+      yarn start
+    </stache-markdown>
+
+    <h3><strong>NPM EXAMPLE</strong></h3>
+
+    <stache-markdown>
+      npm install
+      npm run load
+      npm start
+    </stache-markdown>
+
+    <p>Check your terminal and verify the API starts. Attempt the following HTTP requests using a client such as your browser or POSTman.</p>
+
+    <stache-markdown>
+      GET httpL//localhost:5000/resources
+    </stache-markdown>
+
 </stache>

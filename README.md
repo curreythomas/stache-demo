@@ -1,10 +1,29 @@
-# SKY UX Builder Template for Stache sites
+## Homepage
 
-```
-npm install
-skyux serve
-```
+![alt text](https://github.com/curreythomas/stache-demo/blob/master/src/assets/imgs/homepage.png)
 
-## Found an issue?
+## App
 
-Please log all issues related to Stache (and its plugins) at [blackbaud/stache2](https://github.com/blackbaud/stache2/issues).
+![alt text](https://github.com/curreythomas/stache-demo/blob/master/src/assets/imgs/app.png)
+
+## API-Home
+
+![alt text](https://github.com/curreythomas/stache-demo/blob/master/src/assets/imgs/api-home.png)
+
+## API-Home 2
+
+![alt text](https://github.com/curreythomas/stache-demo/blob/master/src/assets/imgs/api-home2.png)
+
+## API-Categories
+
+![alt text](https://github.com/curreythomas/stache-demo/blob/master/src/assets/imgs/api-categories.png)
+
+## API-Categories 2
+
+![alt text](https://github.com/curreythomas/stache-demo/blob/master/src/assets/imgs/api-categories2.png)
+
+## API-Resources
+
+![alt text](https://github.com/curreythomas/stache-demo/blob/master/src/assets/imgs/api-resources.png)
+
+
